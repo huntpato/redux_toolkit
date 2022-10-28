@@ -5,7 +5,7 @@ import styles from "./Counter.module.css";
 
 const Counter = () => {
 
-  const {} = styles;  
+  const { container,container_buttons } = styles;  
 
   const value = useAppSelector((state) => state.counter.value);
   const dispatch = useAppDispatch();
@@ -14,30 +14,33 @@ const Counter = () => {
   const numberValue = Number(incrementValue) || 0;
 
   return (
-    <div>
+    <div className={container}>
       <p>El valor es: {value}</p>
-      <button
-        aria-label="Increment value"
-        onClick={() => dispatch(increment())}
-      >
-        +
-      </button>
-      <button
-        aria-label="Decrement value"
-        onClick={() => dispatch(decrement())}
-      >
-        -
-      </button>
-      <input
-        aria-label="Set Increment value"
-        value={incrementValue}
-        onChange={(e) => setIncrementValue(e.target.value)}
-      />
-      <button
-        onClick={() => dispatch(incrementByAmount(numberValue))}
-      >
-        Sumar valor
-      </button>
+      <div className={container_buttons}>
+        <button
+          aria-label="Increment value"
+          onClick={() => dispatch(increment())}
+        >
+          +
+        </button>
+        <button
+          aria-label="Decrement value"
+          onClick={() => dispatch(decrement())}
+          disabled={value === 0}
+        >
+          -
+        </button>
+        <input
+          aria-label="Set Increment value"
+          value={incrementValue}
+          onChange={(e) => setIncrementValue(e.target.value)}
+          />
+        <button
+          onClick={() => dispatch(incrementByAmount(numberValue))}
+          >
+          Sumar valor
+        </button>
+      </div>
     </div>
   );
 };

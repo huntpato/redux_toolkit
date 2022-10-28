@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid var(--white);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 300px;
+}
+
+.container_buttons{
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 10px;
+    width: 100%; 
+}
+
+.container_buttons button, input{ 
+    background-color: var(--grey);
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 7px 15px;
+    color: var(--white);
+    font-weight: 500;
+    margin-right: 5px;
+}
