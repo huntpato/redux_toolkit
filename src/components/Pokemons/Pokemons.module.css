@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid var(--white);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 250px;
+}
+
+.container p{
+    color: var(--orange);
+    margin-bottom: 10px;
+}
+
+.container li{
+    list-style: none;
+    margin-bottom: 3px;
+}

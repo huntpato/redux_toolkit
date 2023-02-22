@@ -25,7 +25,16 @@ const Navigation = () => {
           Counter
         </NavLink>
       </li>
-      <li>List</li>
+      <li>
+        <NavLink
+          to="/pokemons"
+          className={({ isActive }) =>
+            isActive ? nav_links_active : nav_links_inactive
+          }
+        >
+          PokeList
+        </NavLink>
+      </li>
     </ul>
   );
 };

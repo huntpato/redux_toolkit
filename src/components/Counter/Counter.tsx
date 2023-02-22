@@ -15,7 +15,7 @@ const Counter = () => {
 
   return (
     <div className={container}>
-      <p>El valor es: {value}</p>
+      <p>El valor total es: {value}</p>
       <div className={container_buttons}>
         <button
           aria-label="Increment value"
